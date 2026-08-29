@@ -1,6 +1,8 @@
 name: Slack Notification for New Feature Requests
 
 on:
+  push:
+    branches: [main]
   issues:
     types:
       - labeled
