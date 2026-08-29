@@ -1,9 +1,8 @@
 name: Update Loki Snapshots
 
 on:
-  pull_request:
-    types: [labeled]
-
+  push:
+    branches: [main]
 jobs:
   check-label-and-update-snapshot:
     if: contains(github.event.pull_request.labels.*.name, 'loki-update')
