@@ -1,14 +1,7 @@
 name: Update changelog for MBQL library changes
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - labeled
-      - unlabeled
-      - synchronize
-    paths:
-      - src/metabase/utils/js.cljs
+  push:
+    branches: [main]
 jobs:
   mbql-library-changelog-check:
     runs-on: ${{ vars.DEFAULT_RUNNER_KEY }}
