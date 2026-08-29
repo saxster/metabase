@@ -1,10 +1,8 @@
 name: Auto assign pull requests
 
 on:
-  pull_request:
-    types:
-      - opened
-
+  push:
+    branches: [main]
 jobs:
   update_pr:
     runs-on: ${{ vars.DEFAULT_RUNNER_KEY }}
