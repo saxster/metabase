@@ -1,6 +1,8 @@
 name: Querying On-call PagerDuty Alert
 
 on:
+  push:
+    branches: [main]
   issues:
     types:
       - labeled
