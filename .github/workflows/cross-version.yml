@@ -1,6 +1,8 @@
 name: Cross-Version Migration Tests
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       source_version:
@@ -11,16 +13,6 @@ on:
         description: "Target version (e.g., v1.58.7 or HEAD)"
         required: true
         type: string
-
-  pull_request:
-    paths:
-      - "cross-version/**"
-      - ".github/workflows/cross-version.yml"
-      - ".github/scripts/build-cross-version-matrix.js"
-
-  schedule:
-    # Run nightly at 3 AM UTC
-    - cron: "0 3 * * *"
 
 jobs:
   # Generate matrix for scheduled/PR runs
