@@ -2,6 +2,8 @@ name: Release 1a - Tag Release Artifact
 run-name: Tag ${{ inputs.version }}
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       version:
