@@ -2,6 +2,8 @@ name: Release Milestone Check
 run-name: Pre-release Milestone check for ${{ inputs.version }}
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       version:
