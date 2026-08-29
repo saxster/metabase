@@ -1,10 +1,8 @@
 name: Snowplow
 
 on:
-  pull_request:
-    branches:
-      - '**'
-
+  push:
+    branches: [main]
 jobs:
   files-changed:
     name: Check which files changed
