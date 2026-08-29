@@ -1,7 +1,8 @@
 name: Loki Visual Regression Testing
 
 on:
-  pull_request:
+  push:
+    branches: [main]
   merge_group:
 
 jobs:
