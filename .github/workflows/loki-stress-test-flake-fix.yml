@@ -1,11 +1,8 @@
 name: Loki Visual Stress Test Flake Fix
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-    paths:
-      - 'frontend/**/*.stories.tsx'
-      - 'enterprise/frontend/**/*.stories.tsx'
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       story_files:
