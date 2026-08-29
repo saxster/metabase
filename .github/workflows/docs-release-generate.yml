@@ -1,8 +1,8 @@
 name: Auto-update documentation (release)
 
 on:
-  schedule:
-    - cron: "0 22 * * 1-5" # Every Monday through Friday at 10 PM UTC
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       target_branch:
