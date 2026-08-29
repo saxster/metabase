@@ -1,6 +1,8 @@
 name: SDK
 
 on:
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       cli-snippets-type-check:
