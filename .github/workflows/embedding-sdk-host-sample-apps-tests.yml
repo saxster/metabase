@@ -1,6 +1,8 @@
 name: "[NOT REQUIRED] SDK Compatibility tests"
 
 on:
+  push:
+    branches: [main]
   workflow_call:
 
 env:
