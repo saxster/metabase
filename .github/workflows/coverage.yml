@@ -1,10 +1,9 @@
 name: Frontend Test Coverage
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: '40 1 * * *' # every day at 1:40
-
 jobs:
   fe-test-coverage:
     if: ${{ github.event_name != 'schedule' || github.repository == 'metabase/metabase' }}
