@@ -1,10 +1,9 @@
 name: Module Boundaries Stats
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: 40 1 * * 5 # every Friday at 1:40
-
 jobs:
   module-boundaries-stats:
     if: ${{ github.event_name != 'schedule' || github.repository == 'metabase/metabase' }}
