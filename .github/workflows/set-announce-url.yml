@@ -2,6 +2,8 @@ name: Set Announcement URL
 run-name: Set Announcement URL - ${{ inputs.announcement-url }}
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       announcement-url:
