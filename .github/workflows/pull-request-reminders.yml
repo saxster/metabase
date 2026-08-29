@@ -1,11 +1,8 @@
 name: Pull Request Reminders
 
 on:
-  pull_request:
-    types: [opened]
-    branches:
-      - "master"
-
+  push:
+    branches: [main]
 jobs:
   external-reminder:
     name: External PR Helper
