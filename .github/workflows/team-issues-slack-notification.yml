@@ -1,6 +1,8 @@
 name: Team Issues Slack Notification
 
 on:
+  push:
+    branches: [main]
   issues:
     types:
       - labeled
