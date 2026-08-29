@@ -1,9 +1,8 @@
 name: PR Closed or Unlabeled
 
 on:
-  pull_request:
-    types: [ closed, unlabeled ]
-
+  push:
+    branches: [main]
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: false
