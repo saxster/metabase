@@ -2,6 +2,8 @@ name: Release 1 - Build Release Artifact
 run-name: Build ${{ inputs.version }}
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       version:
