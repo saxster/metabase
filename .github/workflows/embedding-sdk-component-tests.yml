@@ -1,6 +1,8 @@
 name: Embedding SDK Component Tests
 
 on:
+  push:
+    branches: [main]
   workflow_call:
 
 env:
