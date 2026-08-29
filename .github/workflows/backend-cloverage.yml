@@ -10,6 +10,8 @@ name: Backend-Cloverage
 # -c (compact single-line output for GitHub Actions).
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   # re-enable once we figure out the correctness of the reports in DEV-1104
   # schedule:
