@@ -2,6 +2,8 @@ name: Release 4 - Set Release Channel
 run-name: Set ${{ inputs.version }} as ${{ inputs.tag_name }} ( ${{ inputs.tag_ee && 'EE' || '' }} ${{ inputs.tag_oss && 'OSS' || '' }} )
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       version:
