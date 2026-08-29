@@ -3,6 +3,8 @@ name: Reusable - Update Documentation
 
 # This workflow is designed to be called by other workflows.
 on:
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       target_branch:
