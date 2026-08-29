@@ -2,6 +2,8 @@ name: Release Metabase Embedding SDK for React
 run-name: Release SDK from ${{ inputs.branch }}
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       branch:
