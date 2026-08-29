@@ -10,9 +10,6 @@ on:
       - "**/package.json"
       - ".github/workflows/snyk.yml"
       - ".github/scripts/write-poms.sh"
-  schedule:
-    - cron: "0 5 * * *"
-
 jobs:
   # Generate pom.xml files for all Maven projects
   generate-poms:
