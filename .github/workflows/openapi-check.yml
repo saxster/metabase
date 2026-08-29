@@ -1,9 +1,8 @@
 name: OpenAPI Check
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, labeled, unlabeled]
-
+  push:
+    branches: [main]
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
