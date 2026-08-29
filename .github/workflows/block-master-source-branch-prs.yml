@@ -1,8 +1,7 @@
 name: Block Master Branch PRs
 on:
-  pull_request:
-    types: [opened, synchronize]
-
+  push:
+    branches: [main]
 jobs:
   check-source-branch:
     runs-on: ${{ vars.DEFAULT_RUNNER_KEY }}
