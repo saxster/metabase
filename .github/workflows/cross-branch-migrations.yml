@@ -1,10 +1,8 @@
 name: Cross-branch migration tests
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - "resources/migrations/**"
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       base-ref:
