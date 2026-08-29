@@ -1,8 +1,8 @@
 name: Mage Tests
 
 on:
-  pull_request:
-
+  push:
+    branches: [main]
 jobs:
   # run mage tests even if the rest of be isnt needed
   mage-tests:
