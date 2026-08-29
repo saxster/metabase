@@ -1,6 +1,8 @@
 name: Reset Cloud Test Dataset
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       driver:
