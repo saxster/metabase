@@ -1,10 +1,9 @@
 name: Crowdin Context Harvester
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: "30 6 * * 2" # Tuesday at 06:30 UTC, one hour after translation-update.yml
-
 jobs:
   harvest:
     if: ${{ github.event_name != 'schedule' || github.repository == 'metabase/metabase' }}
