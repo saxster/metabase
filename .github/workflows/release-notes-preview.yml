@@ -2,6 +2,8 @@ name: Release Notes Preview
 run-name: Preview ${{ inputs.version }} release notes
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       version:
