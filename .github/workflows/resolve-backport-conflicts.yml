@@ -2,8 +2,8 @@ name: Auto-resolve backport conflicts
 run-name: Auto-resolve conflicts on PR #${{ github.event.pull_request.number || github.event.inputs.pr_number }}
 
 on:
-  pull_request:
-    types: [labeled]
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       pr_number:
