@@ -1,6 +1,8 @@
 name: Generative Query Test
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       context-seed:
