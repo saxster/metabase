@@ -1,10 +1,9 @@
 name: Disabled Drivers Slack Notification
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: "0 9 * * 1" # every Monday at 9:00 UTC
-
 jobs:
   notify-disabled-drivers:
     if: ${{ github.event_name != 'schedule' || github.repository == 'metabase/metabase' }}
