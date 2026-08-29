@@ -1,10 +1,9 @@
 name: JS Stats Update
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: 40 1 * * 4 # every Thursday at 1:40
-
 jobs:
   js-stats:
     if: ${{ github.event_name != 'schedule' || github.repository == 'metabase/metabase' }}
