@@ -1,6 +1,8 @@
 name: E2E Stress Test Flake Fix
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       spec:
