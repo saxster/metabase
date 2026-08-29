@@ -1,6 +1,8 @@
 name: Publish Athena JDBC Driver
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       version:
