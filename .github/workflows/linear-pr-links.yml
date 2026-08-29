@@ -1,9 +1,8 @@
 name: Add Issue References to PR
 
 on:
-  pull_request:
-    types: [opened, edited, synchronize]
-
+  push:
+    branches: [main]
 jobs:
   add-issue-references:
     runs-on: ${{ vars.DEFAULT_RUNNER_KEY }}
